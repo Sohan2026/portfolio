@@ -2,21 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title> Sohan Raval  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sohan Raval</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            max-width: 100ch;
+            margin-inline: max(1em, (100% - 100ch) / 2);
+            padding-inline: 16px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid oklch(80% 3% 200);
+        }
+        nav a {
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+            flex: 1;
+            padding: 0.5rem;
+        }
+        nav a:hover {
+            color: oklch(37.06% 0.1644 266.82); 
+            border-bottom: 0.4em solid oklch(37.06% 0.1644 266.82); 
+        }
+        nav a.current {
+            font-weight: bold;
+            border-bottom: 0.4em solid oklch(80% 3% 200);
+            padding-bottom: 0.4em;
+        }
+    </style>
 </head>
 <body>
-    <h1> Sohan Raval </h1>
-    <p> Hello my name is Sohan and I am currently attending UCSD, studying Data Science</p>
-    <img src="images/packers.png" alt="packers football stadium"/> 
-    <p>Packers football stadium</p>
-    <nav> 
-        <a href="../portfolio/index.html">Home</a>
+    <nav>
+        <a href="../portfolio/index.html" class="current">Home</a> 
         <a href="../portfolio/projects/index.html">Projects</a>
         <a href="../portfolio/contact/index.html">Contacts</a>
         <a href="https://github.com/Sohan2026" target="_blank">GitHub</a>
         <a href="../portfolio/cv/index.html">CV</a>
     </nav>
+    <h1>Sohan Raval</h1>
+    <p>Hello, my name is Sohan and I am currently attending UCSD, studying Data Science</p>
+    <img src="images/packers.png" alt="Packers football stadium" width="600" height="400"/>
+    <p>Packers football stadium</p>
 </body>
 </html>

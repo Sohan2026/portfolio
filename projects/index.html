@@ -4,15 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-</head>
-<body>
-    <h1>Projects</h1>
     <nav> 
         <a href="../index.html">Home</a>
-        <a href="../projects/index.html">Projects</a>
+        <a href="../projects/index.html" class="current">Projects</a>
         <a href="../contact/index.html">Contacts</a>
         <a href="https://github.com/Sohan2026" target="_blank">GitHub</a>
         <a href="../cv/index.html">CV</a>
     </nav>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 100ch;
+            margin-inline: max(1em, (100% - 100ch) / 2);
+            padding-inline: 16px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid oklch(80% 3% 200);
+        }
+        nav a {
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+            flex: 1;
+            padding: 0.5rem;
+        }
+        nav a:hover {
+            color: oklch(37.06% 0.1644 266.82); 
+            border-bottom: 0.4em solid oklch(37.06% 0.1644 266.82); 
+        }
+        nav a.current {
+            font-weight: bold;
+            border-bottom: 0.4em solid oklch(80% 3% 200);
+            padding-bottom: 0.4em;
+        }
+        .projects 
+        {
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); 
+            gap: 1em;
+        }
+
+        article 
+        {
+            display: grid; 
+            grid-template-rows: subgrid; 
+            grid-row: span 3; 
+        }
+
+        article h2 
+        {
+            margin: 0; 
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.1; 
+            text-wrap: balance; 
+        }
+        h1 
+        {
+            font-size: 300%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Projects</h1>
+    <div class="projects">
+        <article>
+            <h2>Lorem ipsum dolor sit.</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, odit quisquam impedit consectetur natus quasi totam error. Quas, debitis similique laudantium, id perferendis cupiditate recusandae, qui fuga corporis maxime velit?</p>
+        </article>
+        <article>
+            <h2>Perferendis autem ad mollitia?</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
+            <p>Cumque ad ducimus ullam neque aspernatur, numquam recusandae illo quos voluptas explicabo consequuntur labore minima porro nihil modi repudiandae tempore totam obcaecati error libero distinctio excepturi. Tenetur voluptatum libero cupiditate?</p>
+        </article>
+        <article>
+            <h2>Ducimus ipsa accusamus magnam?</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
+            <p>Aliquam, reprehenderit sit ab libero eveniet veniam soluta at nisi enim quo suscipit! Assumenda blanditiis velit esse dolor sit at adipisci nostrum nulla beatae. Aspernatur est eveniet reprehenderit nihil ut.</p>
+        </article>
+        <article>
+            <h2>Deserunt hic maiores amet.</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
+            <p>Expedita non enim temporibus quasi aliquid sequi in! Consequuntur, voluptates. Odit dolores magni veniam fugiat tempore necessitatibus dolorum repellat iusto? Fugiat ipsum est, atque nam quos ab quasi vero rerum.</p>
+        </article>
+        <article>
+            <h2>Earum fuga et amet!</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
+            <p>Adipisci sapiente cupiditate amet placeat labore laborum, libero sunt id quidem distinctio totam incidunt omnis dolorum est accusamus quas iste mollitia dignissimos necessitatibus, velit ullam sequi expedita! Debitis, voluptates sunt!</p>
+        </article>
+        <article>
+            <h2>Sapiente hic reprehenderit libero!</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
+            <p>Iste blanditiis, sint fugiat in, voluptates doloremque fugit id rem perspiciatis quibusdam maxime cupiditate nisi eum labore unde natus quod facere illo placeat? Nesciunt quibusdam ea exercitationem? Consectetur, totam. Dolor.</p>
+        </article>
+        <article>
+            <h2>Ipsum ea eius quas.</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
+            <p>Maxime dolores itaque repudiandae esse qui minus minima corrupti, vero consectetur ea quae modi optio cumque tempora eum velit aperiam, magnam, iusto perferendis. Amet veritatis nihil reprehenderit voluptate architecto dolore.</p>
+        </article>
+        <article>
+            <h2>Rem mollitia cum inventore!</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
+            <p>Nam provident dolores illo voluptas. Cupiditate sapiente porro adipisci quas aperiam et ex quia similique sed vitae dicta nobis at rem facilis sunt culpa aspernatur, minus consequuntur accusamus possimus iste?</p>
+        </article>
+        <article>
+            <h2>Provident error facere sed.</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
+            <p>Deleniti inventore laboriosam iste dolores distinctio deserunt et pariatur rerum dicta, amet repellendus. Animi ipsa quam consectetur rerum officia, architecto soluta unde ea odit repellat cumque corporis. Facere, at odit.</p>
+        </article>
+        <article>
+            <h2>Aperiam tenetur veritatis culpa?</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
+            <p>Provident explicabo ipsum dicta, nam natus est aliquam accusamus placeat vero doloremque sapiente mollitia deserunt, voluptates temporibus ipsa vel perspiciatis dolore voluptate aliquid. Pariatur blanditiis vel delectus aut perferendis omnis.</p>
+        </article>
+        <article>
+            <h2>Praesentium provident non soluta?</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
+            <p>Alias sit voluptatum dignissimos unde! Doloremque est, perferendis hic nobis nam minus maiores aperiam labore voluptate laudantium tenetur, atque magnam eos vero sunt non quae itaque velit repudiandae blanditiis quod.</p>
+        </article>
+        <article>
+            <h2>Recusandae repellat odit nostrum.</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
+            <p>Sunt, beatae ab. Veniam quaerat a minima quae, sapiente dolore magni omnis quisquam expedita saepe delectus vitae praesentium sunt voluptates, nam nostrum quam eaque ipsa suscipit tenetur assumenda earum! Aperiam?</p>
+        </article>
+    </div>
 </body>
 </html>
