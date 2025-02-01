@@ -34,8 +34,8 @@ article img {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Force three columns */
-  gap: 16px;  /* Uniform spacing between items */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 16px;  
 }
 
 
