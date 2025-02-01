@@ -61,3 +61,61 @@ for (let p of pages) {
     document.documentElement.style.setProperty("color-scheme", newValue);
     localStorage.colorScheme = newValue;
   });
+
+  export async function fetchJSON(url) {
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`Failed to fetch projects: ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching or parsing JSON data:', error);
+    }
+
+  const data = await response.json();
+  return data; 
+
+}
+
+export function renderProjects(project, containerElement, headingLevel = 'h2') {
+
+  const validHeadingLevels = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+  if (!validHeadingLevels.includes(headingLevel)) {
+      console.warn(`Invalid heading level: ${headingLevel}. Defaulting to 'h2'.`);
+      headingLevel = 'h2';
+  }
+
+  const article = document.createElement('article');
+
+  const heading = document.createElement(headingLevel);
+  heading.textContent = project.title;
+
+  const img = document.createElement('img');
+  img.src = project.image;
+  img.alt = project.title;
+
+  const description = document.createElement('p');
+  description.textContent = project.description;
+
+  article.appendChild(heading);
+  article.appendChild(img);
+  article.appendChild(description);
+
+  containerElement.appendChild(article);
+}
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+
+
+
+
+
+
+
+
