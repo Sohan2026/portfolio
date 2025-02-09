@@ -39,20 +39,59 @@
             border-bottom: 0.4em solid oklch(80% 3% 200);
             padding-bottom: 0.4em;
         }
-        .projects {
+        .container {
+            display: flex;
+            gap: 2em;
+            align-items: flex-start;
+        }
+        .legend {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 1em;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); 
-            gap: 1em;
+            grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+            gap: 0.5em;
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin-top: 2em;
+            flex: 1;
+        }
+        .legend li {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            font-size: 1rem;
+        }
+        .swatch {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            aspect-ratio: 1 / 1;
+            background-color: var(--color);
+            border-radius: 50%;
+        }
+        .searchBar {
+            margin-top: 20px;
+            padding: 0.5em;
+            width: 100%;
+            max-width: 400px;
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
     <h1>Welcome to My Portfolio</h1>
     <h2>Latest Projects</h2>
-
-    <div class="projects">
+    <input
+      class="searchBar"
+      type="search"
+      aria-label="Search projects"
+      placeholder="Search projects…"
+    />
+    <div class="container">
+        <svg id="projects-pie-plot" viewBox="-50 -50 100 100"></svg>
+        <ul class="legend"></ul>
     </div>
-    <script src="../global.js" type="module"></script>
-    <script src="projects.js" type="module"></script>
+    <div class="projects"></div>
 </body>
 </html>

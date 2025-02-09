@@ -82,13 +82,6 @@ for (let p of pages) {
 }
 
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
-
-  const validHeadingLevels = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-  if (!validHeadingLevels.includes(headingLevel)) {
-      console.warn(`Invalid heading level: ${headingLevel}. Defaulting to 'h2'.`);
-      headingLevel = 'h2';
-  }
-
   const article = document.createElement('article');
 
   const heading = document.createElement(headingLevel);
@@ -101,16 +94,29 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
   const description = document.createElement('p');
   description.textContent = project.description;
 
+  const yearDiv = document.createElement('div');  // Create a container for the year
+  const yearText = document.createElement('span');
+  yearText.textContent = `Year: ${project.year}`;
+  yearText.style.fontWeight = 'bold';
+  yearDiv.appendChild(yearText);
+
+  const contentDiv = document.createElement('div'); // Wrap both description and year
+  contentDiv.appendChild(description);
+  contentDiv.appendChild(yearDiv);
+
   article.appendChild(heading);
   article.appendChild(img);
-  article.appendChild(description);
+  article.appendChild(contentDiv);
 
   containerElement.appendChild(article);
 }
 
+
 export async function fetchGitHubData(username) {
   return fetchJSON(`https://api.github.com/users/${username}`);
 }
+
+
 
 
 

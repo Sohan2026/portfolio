@@ -45,4 +45,57 @@ article {
   background-color: #f9f9f9;  
 }
 
+.yearDiv {
+  font-style: italic;
+  color: #666;
+  margin-top: 8px;
+}
+
+#projects-pie-plot {
+  max-width: 20em;  
+  margin-block: 2em;  
+  overflow: visible;  
+}
+
+.legend {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr)); 
+  gap: 0.5em;
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1rem;
+}
+
+.swatch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%; 
+}
+
+svg path {
+  transition: 300ms;
+}
+
+svg:hover path {
+  opacity: 0.5; 
+}
+
+svg path:hover {
+  opacity: 1; 
+}
+
+
 
